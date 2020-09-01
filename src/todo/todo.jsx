@@ -25,7 +25,7 @@ export default class Todo extends Component {
         this.setState({ ...this.state, description: e.target.value })
     }
 
-    refre() {
+    refresh() {
         axios.get(`${URSL}?sort=-createAt`)
             .then(resp => this.setState({ ...this.state, description: '', list: resp.data }))
     }
